@@ -1,29 +1,37 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-
 export class RegisterComponent {
-  correo!: string;  // nombre de la propiedad actualizado a 'correo'
-  contrasena!: string;  // nombre de la propiedad actualizado a 'contrasena'
+  email: string = '';
+  password: string = '';
+  
+  constructor(private authService: AuthService, private router: Router) { }
 
-  constructor(private http: HttpClient) { }
 
-  register(): void {
-    const data = {
-      email: this.correo,  // asegúrate de que este campo coincida con lo que espera tu backend
-      password: this.contrasena  // asegúrate de que este campo coincida con lo que espera tu backend
-    };
-
-    this.http.post('http://127.0.0.1:8000/register', data)
-      .subscribe(response => {
-        console.log('Registro exitoso:', response);
-      }, error => {
-        console.error('Error en el registro:', error);
-      });
+  register() {
+    this.authService.register(this.email, this.password).subscribe(
+      (response: any) => {
+        console.log(response);
+        alert('Usuario registrado con éxito');
+        this.router.navigate(['/login']);  
+      },
+      (error: any) => {
+        console.error(error);
+        if (error.status === 400 && error.error.detail === 'El correo electrónico ya existe') {
+          alert('Error: El correo electrónico ya está registrado');
+        } else {
+          alert('Error al registrar el usuario');
+        }
+      }
+    );
   }
+  
+  
 }

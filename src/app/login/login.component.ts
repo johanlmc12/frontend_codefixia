@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -8,17 +10,19 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent {
 
-  username: string = '';
+  email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) { }  
+  constructor(private authService: AuthService, private router: Router) { }
 
-  usuario: any;
-
-/*ngOnInit(): void {
-  this.authService.getUsuario(1).subscribe(data => {
-    this.usuario = data;
-  });
+  onSubmit() {
+    this.authService.login(this.email, this.password).subscribe(response => {
+        window.alert('Inicio de sesión exitoso');
+        this.router.navigate(['/principal']);
+    }, error => {
+        window.alert('Error en el inicio de sesión: ' + (error.error.detail || 'Inténtalo de nuevo más tarde.'));
+    });
 }
-*/
+
+
 }

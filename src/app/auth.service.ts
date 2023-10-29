@@ -8,22 +8,19 @@ import { Observable } from 'rxjs';
 
 export class AuthService {
 
-  private baseUrl = 'http://localhost:4000';
+  private baseUrl = 'http://localhost:8000';
 
   constructor(private http: HttpClient) { }
 
-  obtenerDatos() {
-    this.http.get('http://localhost:4000/usuario').subscribe(data => {
-      console.log(data);
-    });
-  }
-  
-  register(email: string, password: string,): Observable<any> {
-    const data = {
-      email: email,
-      password: password,
-    };
+  register(email: string, password: string) {
+    const data = { email, password };
     return this.http.post(`${this.baseUrl}/register`, data);
   }
+
+    login(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/login`, { email, password });
+  }
+
+
 }
 

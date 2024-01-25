@@ -1,53 +1,119 @@
-.contenedor-principal {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  justify-content: center;
+  height: 100vh;
 }
 
-.menu-hamburguesa {
+
+/* Nueva barra negra en la parte superior */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  height: 80px;
   display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  margin: 20px;
+  align-items: center;
+  justify-content: flex-end; /* Alineación horizontal a la derecha */
 }
 
-.barra {
-  background-color: #333;
-  height: 5px;
-  width: 30px;
-  margin: 3px 0;
+.left-content, .center-content, .right-content {
+  flex: 1; /* Cada div tomará un tercio del espacio disponible */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
 }
 
-.menu-lateral {
-  display: none;
-  background-color: #f5f5f5;
-  width: 250px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+.title {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-.menu-lateral.mostrar {
-  display: block;
+.menu-container {
+  margin-right: 20px; /* Espaciado desde la derecha */
 }
 
-.menu-lateral ul {
-  list-style-type: none;
+/* Resto de estilos */
+body {
+  margin: 0;
   padding: 0;
 }
 
-.menu-lateral li {
-  padding: 10px;
+#menuContainer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+#menuIcon {
+  width: 55px;
+  height: 55px;
   cursor: pointer;
 }
 
-.menu-lateral li:hover {
+#dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#dropdownMenu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#menuContainer:hover #dropdownMenu {
+  display: block;
+}
+
+#dropdownMenu a:hover {
   background-color: #ddd;
 }
 
-.bienvenida {
-  margin-top: 40px;
-  font-size: 24px;
-  font-weight: bold;
+
+/* ... (el resto de tu código CSS) ... */
+
+
+/* Parte superior izquierda: Logo pequeño */
+.top-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#small-logo {
+  width: 70px;
+  height: 65px;
+}
+
+/* Centro izquierda: Mensaje de bienvenida */
+.welcome-message {
+  position: absolute;
+  left: 10%;
+  width: 40%;
+  text-align: left;
+  font-size: 28px;
+}
+
+/* Centro derecha: Imagen de estadísticas */
+.statistics-image {
+  position: absolute;
+  right: 10%;
+  width: 40%;
+}
+
+.statistics-image img {
+  max-width: 100%;
 }

@@ -1,25 +1,45 @@
-<div class="contenedor-principal">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="principal.component.css">
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.dropdown-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body class="fondo">
+    <div class="nav-bar">
+    <div class="center-content">
+        <span class="title">CODEFIXIA</span> 
+    </div>
+        <div id="menuContainer">
+            <img src="assets/images/Menu.jpg"  id="menuIcon">
+            <div id="dropdownMenu">
+              <a href="/form-repositorio">Añadir repositorio</a>
+              <a href="#opcion2">Opción 2</a>
+              <a href="#opcion3">Opción 3</a>
+            </div>
+          </div>
+    </div>
+    
+    <div class="top-left">
+        <img src="assets/images/logo.jpg" alt="Logo pequeño" id="small-logo">
+    </div>
 
-  <!-- Menú hamburguesa -->
-  <div class="menu-hamburguesa" (click)="toggleMenu()">
-    <div class="barra"></div>
-    <div class="barra"></div>
-    <div class="barra"></div>
-  </div>
+    <div class="welcome-message">
+        ¡Bienvenidos al Software de Análisis de Código estatico en Java con IA para estudiantes de ingeniería de sistemas de la UCEVA! Optimiza y corrige tus proyectos con nosotros.
+    </div>
 
-  <!-- Menú lateral -->
-  <div class="menu-lateral" [class.mostrar]="menuVisible">
-    <ul>
-      <li>Opción 1</li>
-      <li>Opción 2</li>
-      <li>Opción 3</li>
-    </ul>
-  </div>
 
-  <!-- Mensaje de bienvenida -->
-  <div class="bienvenida">
-    ¡Bienvenidos al Software de Análisis de Código en Java con IA para estudiantes de ingeniería de sistemas de la UCEVA! Optimiza y corrige tus proyectos con nosotros.
-  </div>
+    <div class="statistics-image">
+        <img src="assets/images/estadisticas_4k.jpg" alt="Imagen de Estadísticas">
+    </div>
 
-</div>
+</body>
+</html>
 

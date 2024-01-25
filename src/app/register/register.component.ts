@@ -16,6 +16,10 @@ export class RegisterComponent {
 
 
   register() {
+    if (!this.email || !this.password) {
+      alert('Error: Debe ingresar tanto el correo electrónico y la contraseña');
+      return;
+    }
     this.authService.register(this.email, this.password).subscribe(
       (response: any) => {
         console.log(response);
@@ -32,6 +36,7 @@ export class RegisterComponent {
       }
     );
   }
+  
   
   
 }

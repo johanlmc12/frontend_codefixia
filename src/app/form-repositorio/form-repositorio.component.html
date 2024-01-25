@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nuevo Repositorio</title>
+    <link rel="stylesheet" href="form-repositorio.component.css">
+</head>
+<body>
+    <div class="formulario-container">
+        <h1>Crear Nuevo Repositorio</h1>
+        <form id="nuevo-repositorio-form">
+
+            <div class="input-group">
+                <label for="nombre-repo">URL del repositorio que desea subir:</label>
+                <input type="text" id="nombre-repo" name="nombre-repo" required>
+            </div>
+            <div class="input-group">
+                <label for="nombre-repo">Nombre del repositorio:</label>
+                <input type="text" id="nombre-repo" name="nombre-repo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="descripcion-repo">Descripción (opcional):</label>
+                <textarea id="descripcion-repo" name="descripcion-repo" rows="4"></textarea>
+            </div>
+    
+            <div class="input-group">
+                <label for="rama-default">Rama por defecto:</label>
+                <input type="text" id="rama-default" name="rama-default" placeholder="main" required>
+            </div>
+            <button type="submit">Crear Repositorio</button>
+        </form>
+    </div>
+</body>
+</html>

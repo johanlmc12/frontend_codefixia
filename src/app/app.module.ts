@@ -11,6 +11,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {AuthService} from "./auth.service";
 import { PrincipalComponent } from './principal/principal.component';
 import { FormRepositorioComponent } from './form-repositorio/form-repositorio.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 
 const rutas: Routes = [
@@ -34,6 +35,7 @@ const rutas: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    OAuthModule.forRoot(),
     RouterModule.forRoot(rutas),
     RouterModule.forChild([
       {

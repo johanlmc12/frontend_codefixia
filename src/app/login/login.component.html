@@ -21,6 +21,12 @@
                     <input [(ngModel)]="password" type="password" id="password" name="password" required>
                 </div>
                 <button type="submit" class="login-button">Iniciar sesión</button>
+
+                <div class="input-container">
+                    <button class="login-button-google" (click)="login()">
+                        <img src="https://img.icons8.com/color/22/000000/google-logo.png"> inciar sesion
+                    </button>
+                </div>
             </form>
             <a href="register" class="registro">Registrarse</a>
             <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>

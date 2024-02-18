@@ -8,26 +8,26 @@ html {
 body {
     margin: 0;
     padding: 0;
-    width: 230vh; /* Asegúrate de que este valor sea correcto, normalmente se usa 100% */
+    width: 230vh;
     height: 100vh;
     background-image: url('/assets/images/fondo_2.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el espacio disponible */
-    background-position: center center; /* Centra la imagen en la página */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat; 
 }
 
 .login-background {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura del viewport para cubrir toda la pantalla */
+    height: 100vh; 
 }
 
 .programming-icon {
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 50px; /* Ajusta según el tamaño deseado */
+    width: 50px; 
 }
 
 .login-container {
@@ -38,7 +38,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     width: 340px;
     text-align: center;
-    border: 2px solid #25a2b8; /* Borde de color llamativo */
+    border: 2px solid #25a2b8; 
 }
 
 .login-logo {
@@ -56,24 +56,36 @@ input {
     margin-top: 8px;
     border: 1px solid #333;
     background-color: #222;
-    color: #4cffb3; /* Color brillante para el texto */
+    color: #4cffb3; 
     border-radius: 6px;
 }
 
 input::placeholder {
-    color: #4cffb3; /* Color para los placeholders */
+    color: #4cffb3; 
 }
 
 .login-button {
     width: 70%;
     padding: 12px;
-    background-color: #ff4c4c; /* Rojo brillante para el botón */
+    background-color: #ff4c4c; 
     color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     margin-top: 15px;
 }
+
+.login-button-google {
+    width: 70%;
+    padding: 12px;
+    background-color: white; 
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
 
 .login-button:hover {
     background-color: #1e8190; /* Cambia el color al pasar el mouse */
@@ -90,11 +102,11 @@ input::placeholder {
     text-decoration: underline;
 }
 
-/* Estilos para las imágenes laterales */
+
 .side-image {
     position: absolute;
-    height: auto; /* Ajusta según sea necesario */
-    width: auto; /* Ajusta según sea necesario */
+    height: auto; 
+    width: auto; 
 }
 
 .left {
@@ -108,3 +120,5 @@ input::placeholder {
     top: 50%;
     transform: translateY(-50%);
 }
+
+

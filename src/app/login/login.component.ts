@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { AuthGoogleService } from '../auth-google.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-login',
@@ -13,8 +13,8 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService, private router: Router) { }
-
+  constructor(private authService: AuthService, private router: Router, private authGoogleService: AuthGoogleService) { }
+  
   onSubmit() {
     this.authService.login(this.email, this.password).subscribe(response => {
         window.alert('Inicio de sesión exitoso');
@@ -22,7 +22,10 @@ export class LoginComponent {
     }, error => {
         window.alert('Error en el inicio de sesión: ' + (error.error.detail || 'Inténtalo de nuevo más tarde.'));
     });
-}
+  }
 
+  login() {
+    this.authGoogleService.login();
+  }
 
 }

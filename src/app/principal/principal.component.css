@@ -10,7 +10,7 @@ body {
 }
 
 
-/* Nueva barra negra en la parte superior */
+
 .nav-bar {
   position: fixed;
   top: 0;
@@ -20,14 +20,14 @@ body {
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Alineación horizontal a la derecha */
+  justify-content: flex-end; 
 }
 
 .left-content, .center-content, .right-content {
-  flex: 1; /* Cada div tomará un tercio del espacio disponible */
+  flex: 1; 
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .title {
@@ -37,10 +37,10 @@ body {
 }
 
 .menu-container {
-  margin-right: 20px; /* Espaciado desde la derecha */
+  margin-right: 20px; 
 }
 
-/* Resto de estilos */
+
 body {
   margin: 0;
   padding: 0;
@@ -83,10 +83,6 @@ body {
 }
 
 
-/* ... (el resto de tu código CSS) ... */
-
-
-/* Parte superior izquierda: Logo pequeño */
 .top-left {
   position: absolute;
   top: 10px;
@@ -98,7 +94,7 @@ body {
   height: 65px;
 }
 
-/* Centro izquierda: Mensaje de bienvenida */
+
 .welcome-message {
   position: absolute;
   left: 10%;
@@ -107,7 +103,7 @@ body {
   font-size: 28px;
 }
 
-/* Centro derecha: Imagen de estadísticas */
+
 .statistics-image {
   position: absolute;
   right: 10%;
